@@ -1,5 +1,4 @@
 import React from 'react'
-import { TypewriterEffect } from './TypeWriter'
 import { BackgroundLines } from './BackgroundLines'
 import Image from 'next/image'
 import ProfilePic from '@/public/yash.png'
