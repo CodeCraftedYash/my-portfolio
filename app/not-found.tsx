@@ -1,7 +1,7 @@
 const notFound = () =>{
     return(
-        <h1>
-            Whatchya lookin for 
+        <h1 className="place-self-center text-2xl">
+            Bna rha hoon bhai wait kro...
         </h1>
     );
 }

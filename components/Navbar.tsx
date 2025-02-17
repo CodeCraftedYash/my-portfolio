@@ -6,7 +6,7 @@ export default function Navbar (){
         <>
         <header>
         <nav className="w-full border-b-2 p-2 "> 
-          <ul className="flex items-center justify-center gap-10 text-xl ">
+          <ul className="flex items-center justify-center gap-10 text-lg lg:text-xl ">
            <li className="sm:hover:cursor-pointer sm:hover:text-green-300"><Link href="/">Home</Link></li>
            <li className="sm:hover:cursor-pointer sm:hover:text-green-300"><Link href="/education">Education</Link></li>
            <li className="sm:hover:cursor-pointer sm:hover:text-green-300"><Link href="/contact">Contact Me</Link></li>

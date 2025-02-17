@@ -20,6 +20,11 @@ export default function RootLayout({
         className={`${inter.className} antialiased bg-black text-white`}
       >
         {children}
+        <footer className="my-8 w-full">
+          Will <br />
+          write <br />
+          footer <br />
+        </footer>
       </body>
     </html>
   );
