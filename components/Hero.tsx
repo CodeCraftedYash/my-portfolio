@@ -4,12 +4,6 @@ import Image from 'next/image'
 import ProfilePic from '@/public/yash.png'
 import { AnimatedEye } from './AnimatedEye'
 
-
-interface Words {
- text: string
- className: string
-}
-
 function Hero() {
   return (
     <>
