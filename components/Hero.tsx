@@ -16,9 +16,9 @@ function Hero() {
 
           <h3 className='text-lg text-center font-light my-2 lg:my-4'>specializing in frontend development</h3>
           </div>
-          <div className='w-full h-full'>{/**Image + eye */}
+          <div className='w-full h-full flex flex-col items-center justify-center'>{/**Image + eye */}
 
-          <div className='relative w-28 h-28 flex items-center justify-center rounded-full  p-4 place-self-center mt-2 lg:scale-150 lg:my-12'>
+          <div className='relative w-28 h-28 flex items-center justify-center rounded-full  p-4 mt-2 lg:scale-150 lg:my-12'>
           
           <div className="absolute inset-1 rounded-full border-2 animate-wiggle-animation z-0 bg-background/20 backdrop-blur-sm" > </div>
               <Image
