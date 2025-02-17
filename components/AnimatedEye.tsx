@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { eyeVariants} from "./utils";
 export function AnimatedEye() {
-  let measurement = 8;
+  const measurement = 8;
 
   return (
     <div className="w-32 h-32 flex items-center justify-center bg-w">

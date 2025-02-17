@@ -11,11 +11,6 @@ interface Words {
 }
 
 function Hero() {
-  const words: Words[] = [
-    { text: "Frontend Developer", className: "text-blue-500" },
-    { text: "Next.js Enthusiast", className: "text-red-500" }
-  ]
-
   return (
     <>
      

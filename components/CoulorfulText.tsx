@@ -2,8 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 
-export function ColourfulText({ text }: { text: string }) {
-  /* const colors = [
+ /* const colors = [
     "rgb(131, 179, 32)",
     "rgb(47, 195, 106)",
     "rgb(42, 169, 210)",
@@ -27,7 +26,7 @@ export function ColourfulText({ text }: { text: string }) {
     "rgb(255, 255, 255)", // White (Middle)
 ];
 
-
+export function ColourfulText({ text }: { text: string }) {
   const [currentColors, setCurrentColors] = React.useState(colors);
   const [count, setCount] = React.useState(0);
 

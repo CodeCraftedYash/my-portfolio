@@ -1,7 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { div } from "motion/react-client";
-
 export default function Button() {
   return (
     <>
