@@ -14,9 +14,7 @@ const createEyeVariant = (size: number,duration:number) => ({
 const duration = 5;
 // Generate variants dynamically
 export const eyeVariants = {
-  eye1: createEyeVariant(15,duration),
-  eye2: createEyeVariant(12,duration),
-  eye3: createEyeVariant(9,duration),
-  eye4: createEyeVariant(6,duration),
-  eye5: createEyeVariant(10,duration),
-};
+  eye1: createEyeVariant(5,duration),
+  eye2: createEyeVariant(4,duration),
+  eye3: createEyeVariant(3,duration),
+  };

@@ -1,5 +1,6 @@
+import { transform } from "next/dist/build/swc/generated-native";
 import type { Config } from "tailwindcss";
-
+import scrollbarHide from 'tailwind-scrollbar-hide';
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -25,13 +26,18 @@ export default {
           "80%": { transform: "skewX(1deg) scaleY(1.1)" },
           "90%": { transform: "skewX(0deg) scaleY(1)" },
           "100%": { transform: "skewX(0deg) scaleY(1)" },
-            }
+            },
+           moving:{
+            "0%":{translate:"-1em"},
+            "100%":{translate:"8em"},
+           }
       },
       animation:{
-          "wiggle-animation":"wiggle 4s ease-out infinite alternate "
+          "wiggle-animation":"wiggle 4s ease-out infinite alternate ",
+          "moving-animation":"moving 3s linear infinite",
       }
     },
   },
-  plugins: [],
+  plugins: [scrollbarHide,],
 } satisfies Config;
  

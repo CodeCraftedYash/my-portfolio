@@ -1,47 +1,40 @@
-import React from 'react'
-import { BackgroundLines } from './BackgroundLines'
-import Image from 'next/image'
-import ProfilePic from '@/public/yash.png'
-import { AnimatedEye } from './AnimatedEye'
+'use client';
 
-function Hero() {
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Button  from '@/components/Button';
+
+export default function Hero() {
   return (
-    <>
-     
-         <div className='flex flex-col w-full min-h-fit items-center justify-center relative pb-20 lg:pb-0'>
-         <BackgroundLines>
-          <div className='w-full flex flex-col'>
-          <div className='w-5/6 place-self-center mt-12 lg:mt-28'>
-          <h2 className='text-3xl font-bold text-center lg:text-6xl'>Web Developer</h2>
-
-          <h3 className='text-lg text-center font-light my-2 lg:my-4'>specializing in frontend development</h3>
-          </div>
-          <div className='w-full h-full flex flex-col items-center justify-center'>{/**Image + eye */}
-
-          <div className='relative w-28 h-28 flex items-center justify-center rounded-full  p-4 mt-2 lg:scale-150 lg:my-12'>
-          
-          <div className="absolute inset-1 rounded-full border-2 animate-wiggle-animation z-0 bg-background/20 backdrop-blur-sm" > </div>
-              <Image
-              src={ProfilePic}
-              alt="Me"
-              width={100}
-              height={100}
-              className='rounded-full object-cover object-[0px_-20px] z-10 scale-90'
-            />
-          </div>
-          <div className='place-self-start w-fit h-fit scale-75 lg:scale-100 lg:absolute top-40 left-96 ml-2 '>
-            <AnimatedEye />
-            </div>
-          </div>
-          
-            </div>
-          </BackgroundLines>
-          </div>
-        
-       
+    <section className="flex flex-col items-center justify-center text-center min-h-screen px-6">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-screen-lg mx-auto"
+      >
+        <h1 className="text-4xl md:text-6xl font-bold text-white">
+          Hi, I'm <span className="text-blue-400">Yash Mishra</span>
+        </h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-300">
+          Frontend Developer | React, Next, Typescript , tailwind
+        </p>
+        <div className="mt-6 flex gap-4 justify-center">
+          <Button variant="primary">View My Work</Button>
+          <Button variant="outline">Contact Me</Button>
+        </div>
+      </motion.div>
       
-    </>
-  )
+      <div className="mt-10 aspect-square bg-pink-500 p-4">
+        {/* <Image
+          src="/profile-image.png"
+          alt="Profile Image"
+          width={200}
+          height={200}
+          className="rounded-full border-4 border-blue-400 shadow-lg"
+        /> */}
+        something image
+      </div>
+    </section>
+  );
 }
-
-export default Hero

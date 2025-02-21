@@ -1,22 +1,27 @@
-"use client";
-import { motion } from "framer-motion";
-export default function Button() {
-  return (
-    <>
-    <div className="relative w-fit">
-    <motion.div className="w-4 h-4 bg-yellow-500/40 absolute top-0 left-0 scale-150 rounded-full z-10"
-    animate={{
-        x:[-2,70,70,-2,-2],
-        y:[-2,-2,35,35,-2],
-    }}
-    transition={{
-        duration:5,
-        repeat:Infinity,
-    }}
-    ></motion.div>
-    <button className="p-2 whitespace-nowrap border-2 rounded-md z-20">Hire Me</button>
-    
-    </div>
-    </>
-   );
+import React from "react";
+import { cn } from "@/lib/utils"; // Utility for conditional class merging (optional)
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary" | "outline";
 }
+
+const Button: React.FC<ButtonProps> = ({ variant = "primary", className, children, ...props }) => {
+  const baseStyles = "px-4 py-2 rounded-lg font-medium transition-all duration-200";
+  
+  const variants = {
+    primary: "bg-blue-600 text-white hover:bg-blue-700",
+    secondary: "bg-gray-600 text-white hover:bg-gray-700",
+    outline: "border border-gray-600 text-gray-600 hover:bg-gray-100",
+  };
+
+  return (
+    <button
+      className={cn(baseStyles, variants[variant], className)}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+
+export default Button;
