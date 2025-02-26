@@ -11,6 +11,6 @@ const variants ={
     }
 }
 
-export const animateBtnDiv = (direction:string,distance:number)=>{
+/* export const animateBtnDiv = (direction:string,distance:number)=>{
     
-}
+} */
