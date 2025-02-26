@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import WindowsLoading from "@/components/WindowsLoading";
+import { AnimatedEye } from "@/components/AnimatedEye";
+import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <main className="w-full relative">
@@ -11,6 +13,11 @@ export default function Home() {
       <About />
       <WindowsLoading />
       </div>
+          <div className="hidden">
+            <AnimatedEye />
+          </div>
+          <Skills />
+          
     </main>
     );
 }
